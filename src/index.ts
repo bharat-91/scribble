@@ -19,6 +19,9 @@ let currentDrawer: any = null;
 const users: any = [];
 const incorrectGuesses: any = {}; // Store incorrect guesses for each user
 
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 io.on("connection", (socket: any) => {
   console.log("a user connected");
   users.push(socket.id);
